@@ -30,7 +30,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 
+var output2 = a*b;
+var message2 = ('the multiple of ' + a + ' and ' + b + ' is ' + output2 + '.');
+return[output2, message2];
 }
+testmultiply(4, 7);
+
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -39,7 +44,9 @@ function multiply(a, b) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is 
+the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings 
+that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -50,7 +57,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var arr = [];
+  arr[0] = sum(sum(a, b)[0], c)[0];
+  arr[1] = multiply(multiply(a, b)[0], c)[0];
+  arr[2] = sum(sum(a, b)[0], c)[1];
+  arr[3] = multiply(multiply(a, b)[0], c)[1];
+  return(arr);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -93,7 +105,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var arr = [];
+  var product = multArr[0];
+  for( var i = 1; i < multArr.length; i++){
+    product = product*multArr[i]; 
+    return(product, )
+  }
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -121,7 +138,8 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  var dynamicArray [testDynamicArray];
+  return testDynamicArray(2);
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
